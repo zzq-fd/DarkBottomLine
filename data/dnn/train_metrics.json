@@ -114,8 +114,3737 @@
   ],
   "balance_classes": true,
   "class_balance_factors": {
-    "background": 0.5001860174576145,
-    "signal": 1344.4598799276623
+    "background": 0.5057570214118177,
+    "signal": 43.92523366107545
+  },
+  "negative_weight_handling": {
+    "mode": "local_cancellation",
+    "min_events": 50,
+    "min_effective_events": 10.0,
+    "missing_sentinel": -9999.0,
+    "bins": {
+      "njets": [
+        1.5,
+        2.5,
+        3.5,
+        4.5
+      ],
+      "n_bjets": [
+        0.5,
+        1.5
+      ],
+      "Jet2Pt": [
+        50.0,
+        100.0,
+        200.0,
+        400.0
+      ],
+      "costheta_star": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "Recoil": [
+        200.0,
+        300.0,
+        400.0,
+        600.0
+      ],
+      "JetHT": [
+        200.0,
+        300.0,
+        500.0,
+        800.0
+      ]
+    },
+    "levels": [
+      [
+        "has_jet2",
+        "njets",
+        "n_bjets",
+        "Jet2Pt",
+        "costheta_star",
+        "Recoil",
+        "JetHT"
+      ],
+      [
+        "has_jet2",
+        "njets",
+        "n_bjets",
+        "Jet2Pt",
+        "costheta_star",
+        "Recoil"
+      ],
+      [
+        "has_jet2",
+        "njets",
+        "n_bjets",
+        "Jet2Pt",
+        "costheta_star"
+      ],
+      [
+        "has_jet2",
+        "njets",
+        "n_bjets",
+        "Jet2Pt"
+      ],
+      [
+        "has_jet2",
+        "njets",
+        "n_bjets"
+      ],
+      [
+        "has_jet2",
+        "njets"
+      ],
+      [
+        "has_jet2"
+      ],
+      []
+    ]
+  },
+  "weight_roles": {
+    "signed": "physical_yields_score_shapes_significance_sumw2",
+    "local": "auc_roc",
+    "loss": "local_times_training_class_balance"
+  },
+  "weight_diagnostics": {
+    "fit_samples": {
+      "/home/zzq/eventsel-merged/BBDM-2HDMa-5f_TuneCP5_13p6TeV_madgraph-pythia8-RunIII2024Summer24NanoAODv15-FSMiniv6_FSNanov15_150X_mcRun3_2024_realistic_v2-v2_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 99972,
+        "negative_events": 0,
+        "nonfinite_events": 0,
+        "sum_signed": 2.770163751294415,
+        "sum_abs": 2.770163751294415,
+        "levels": [],
+        "sum_output": 2.770163751294415,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/BBDM-2HDMa_500_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 18166,
+        "negative_events": 0,
+        "nonfinite_events": 0,
+        "sum_signed": 19.68280259517059,
+        "sum_abs": 19.68280259517059,
+        "levels": [],
+        "sum_output": 19.68280259517059,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 4953,
+        "negative_events": 1615,
+        "nonfinite_events": 0,
+        "sum_signed": 3.3398729119860837,
+        "sum_abs": 9.25303254831635,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 411,
+            "groups_used": 11,
+            "events_assigned": 2122
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 228,
+            "groups_used": 4,
+            "events_assigned": 365
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 157,
+            "groups_used": 2,
+            "events_assigned": 188
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 54,
+            "groups_used": 8,
+            "events_assigned": 1569
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 14,
+            "groups_used": 1,
+            "events_assigned": 144
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 2,
+            "events_assigned": 254
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 1,
+            "events_assigned": 142
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 169
+          }
+        ],
+        "sum_output": 3.339872911986084,
+        "closure_error": 4.440892098500626e-16
+      },
+      "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 100052,
+        "negative_events": 32093,
+        "nonfinite_events": 0,
+        "sum_signed": 33.580157571166325,
+        "sum_abs": 89.71699142208959,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1291,
+            "groups_used": 166,
+            "events_assigned": 82086
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 570,
+            "groups_used": 37,
+            "events_assigned": 7081
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 224,
+            "groups_used": 33,
+            "events_assigned": 4215
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 60,
+            "groups_used": 27,
+            "events_assigned": 5067
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 13,
+            "groups_used": 5,
+            "events_assigned": 826
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 4,
+            "groups_used": 2,
+            "events_assigned": 638
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 139
+          }
+        ],
+        "sum_output": 33.58015757116631,
+        "closure_error": -1.4210854715202004e-14
+      },
+      "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 99578,
+        "negative_events": 30227,
+        "nonfinite_events": 0,
+        "sum_signed": 8.59117635951884,
+        "sum_abs": 20.861811321406847,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1504,
+            "groups_used": 159,
+            "events_assigned": 80135
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 716,
+            "groups_used": 48,
+            "events_assigned": 7125
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 229,
+            "groups_used": 44,
+            "events_assigned": 5401
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 58,
+            "groups_used": 32,
+            "events_assigned": 5589
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 13,
+            "groups_used": 4,
+            "events_assigned": 553
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 2,
+            "events_assigned": 323
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 1,
+            "events_assigned": 282
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 170
+          }
+        ],
+        "sum_output": 8.591176359518837,
+        "closure_error": -3.552713678800501e-15
+      },
+      "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 747,
+        "negative_events": 245,
+        "nonfinite_events": 0,
+        "sum_signed": 1.5778286119357654,
+        "sum_abs": 4.639589584219055,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 261,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 179,
+            "groups_used": 1,
+            "events_assigned": 92
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 97,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 40,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 13,
+            "groups_used": 1,
+            "events_assigned": 278
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 1,
+            "events_assigned": 215
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 1,
+            "events_assigned": 105
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 57
+          }
+        ],
+        "sum_output": 1.5778286119357658,
+        "closure_error": 4.440892098500626e-16
+      },
+      "/home/zzq/eventsel-merged/GluGluH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 23,
+        "negative_events": 0,
+        "nonfinite_events": 0,
+        "sum_signed": 0.2043050524243352,
+        "sum_abs": 0.2043050524243352,
+        "levels": [],
+        "sum_output": 0.2043050524243352,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/GluGluZH-Zto2L-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 6058,
+        "negative_events": 0,
+        "nonfinite_events": 0,
+        "sum_signed": 2.0216942620949556,
+        "sum_abs": 2.0216942620949556,
+        "levels": [],
+        "sum_output": 2.0216942620949556,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/TBbarQtoLNu-t-channel-4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 63355,
+        "negative_events": 5499,
+        "nonfinite_events": 0,
+        "sum_signed": 313.74845353450763,
+        "sum_abs": 375.030866035166,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1814,
+            "groups_used": 264,
+            "events_assigned": 48201
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 772,
+            "groups_used": 66,
+            "events_assigned": 4838
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 233,
+            "groups_used": 96,
+            "events_assigned": 7647
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 50,
+            "groups_used": 21,
+            "events_assigned": 1955
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 13,
+            "groups_used": 8,
+            "events_assigned": 576
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 1,
+            "events_assigned": 91
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 47
+          }
+        ],
+        "sum_output": 313.74845353450763,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/TBbartoLplusNuBbar-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 22803,
+        "negative_events": 3745,
+        "nonfinite_events": 0,
+        "sum_signed": 6.981101927125375,
+        "sum_abs": 10.1733591331517,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1284,
+            "groups_used": 92,
+            "events_assigned": 13767
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 628,
+            "groups_used": 36,
+            "events_assigned": 2610
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 209,
+            "groups_used": 46,
+            "events_assigned": 3221
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 55,
+            "groups_used": 29,
+            "events_assigned": 2788
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 12,
+            "groups_used": 3,
+            "events_assigned": 205
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 4,
+            "groups_used": 2,
+            "events_assigned": 134
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 78
+          }
+        ],
+        "sum_output": 6.981101927125375,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/TTH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 14871,
+        "negative_events": 520,
+        "nonfinite_events": 0,
+        "sum_signed": 6.521329812470677,
+        "sum_abs": 7.0153459694874725,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1080,
+            "groups_used": 66,
+            "events_assigned": 8770
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 554,
+            "groups_used": 22,
+            "events_assigned": 1304
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 203,
+            "groups_used": 34,
+            "events_assigned": 2559
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 54,
+            "groups_used": 21,
+            "events_assigned": 1589
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 13,
+            "groups_used": 8,
+            "events_assigned": 573
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 4,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 1,
+            "events_assigned": 62
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 14
+          }
+        ],
+        "sum_output": 6.521329812470677,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/TTto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 100166,
+        "negative_events": 745,
+        "nonfinite_events": 0,
+        "sum_signed": 36.93369372328589,
+        "sum_abs": 37.428511468129535,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 2101,
+            "groups_used": 476,
+            "events_assigned": 81813
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 844,
+            "groups_used": 101,
+            "events_assigned": 6256
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 240,
+            "groups_used": 113,
+            "events_assigned": 9103
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 45,
+            "groups_used": 25,
+            "events_assigned": 2450
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 10,
+            "groups_used": 5,
+            "events_assigned": 419
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 3,
+            "groups_used": 1,
+            "events_assigned": 58
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 67
+          }
+        ],
+        "sum_output": 36.93369372328589,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/TTto4Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 810,
+        "negative_events": 17,
+        "nonfinite_events": 0,
+        "sum_signed": 2.8363519081852315,
+        "sum_abs": 2.9424609844049687,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 345,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 227,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 132,
+            "groups_used": 1,
+            "events_assigned": 54
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 45,
+            "groups_used": 4,
+            "events_assigned": 282
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 14,
+            "groups_used": 3,
+            "events_assigned": 190
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 3,
+            "events_assigned": 233
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 51
+          }
+        ],
+        "sum_output": 2.8363519081852315,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 99777,
+        "negative_events": 1215,
+        "nonfinite_events": 0,
+        "sum_signed": 161.7019845026215,
+        "sum_abs": 165.6615386534686,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1884,
+            "groups_used": 362,
+            "events_assigned": 84490
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 803,
+            "groups_used": 82,
+            "events_assigned": 5215
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 236,
+            "groups_used": 92,
+            "events_assigned": 6954
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 51,
+            "groups_used": 28,
+            "events_assigned": 2591
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 11,
+            "groups_used": 4,
+            "events_assigned": 332
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 4,
+            "groups_used": 2,
+            "events_assigned": 155
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 40
+          }
+        ],
+        "sum_output": 161.70198450262154,
+        "closure_error": 2.842170943040401e-14
+      },
+      "/home/zzq/eventsel-merged/TWminustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 67302,
+        "negative_events": 20,
+        "nonfinite_events": 0,
+        "sum_signed": 176.21019627601746,
+        "sum_abs": 176.29428927731243,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1968,
+            "groups_used": 297,
+            "events_assigned": 51007
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 882,
+            "groups_used": 72,
+            "events_assigned": 4299
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 242,
+            "groups_used": 107,
+            "events_assigned": 9008
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 47,
+            "groups_used": 26,
+            "events_assigned": 2345
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 12,
+            "groups_used": 6,
+            "events_assigned": 471
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 4,
+            "groups_used": 1,
+            "events_assigned": 83
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 1,
+            "events_assigned": 58
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 31
+          }
+        ],
+        "sum_output": 176.21019627601746,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/TbarBQtoLNu-t-channel-4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 15690,
+        "negative_events": 1357,
+        "nonfinite_events": 0,
+        "sum_signed": 105.14814505675622,
+        "sum_abs": 125.45236832085418,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1250,
+            "groups_used": 56,
+            "events_assigned": 5847
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 588,
+            "groups_used": 36,
+            "events_assigned": 3666
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 202,
+            "groups_used": 50,
+            "events_assigned": 3301
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 52,
+            "groups_used": 24,
+            "events_assigned": 2284
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 13,
+            "groups_used": 6,
+            "events_assigned": 413
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 1,
+            "events_assigned": 57
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 1,
+            "events_assigned": 85
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 37
+          }
+        ],
+        "sum_output": 105.14814505675622,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/TbarBtoLminusNuB-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 11099,
+        "negative_events": 1858,
+        "nonfinite_events": 0,
+        "sum_signed": 3.286491978978263,
+        "sum_abs": 4.836887356121511,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 988,
+            "groups_used": 37,
+            "events_assigned": 3603
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 515,
+            "groups_used": 24,
+            "events_assigned": 2896
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 199,
+            "groups_used": 32,
+            "events_assigned": 2120
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 56,
+            "groups_used": 22,
+            "events_assigned": 1864
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 14,
+            "groups_used": 5,
+            "events_assigned": 353
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 2,
+            "events_assigned": 171
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 92
+          }
+        ],
+        "sum_output": 3.2864919789782627,
+        "closure_error": -4.440892098500626e-16
+      },
+      "/home/zzq/eventsel-merged/TbarWplustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 96995,
+        "negative_events": 46,
+        "nonfinite_events": 0,
+        "sum_signed": 240.41188748444867,
+        "sum_abs": 240.60182442773626,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 2090,
+            "groups_used": 378,
+            "events_assigned": 78112
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 901,
+            "groups_used": 109,
+            "events_assigned": 6761
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 242,
+            "groups_used": 115,
+            "events_assigned": 9128
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 54,
+            "groups_used": 26,
+            "events_assigned": 2117
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 12,
+            "groups_used": 8,
+            "events_assigned": 747
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 3,
+            "groups_used": 1,
+            "events_assigned": 78
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 52
+          }
+        ],
+        "sum_output": 240.41188748444864,
+        "closure_error": -2.842170943040401e-14
+      },
+      "/home/zzq/eventsel-merged/VBFH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 78,
+        "negative_events": 0,
+        "nonfinite_events": 0,
+        "sum_signed": 0.05542466485815561,
+        "sum_abs": 0.05542466485815561,
+        "levels": [],
+        "sum_output": 0.05542466485815561,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/WW_TuneCP5_13p6TeV_pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 40213,
+        "negative_events": 0,
+        "nonfinite_events": 0,
+        "sum_signed": 239.99195239282898,
+        "sum_abs": 239.99195239282898,
+        "levels": [],
+        "sum_output": 239.99195239282898,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/WZ_TuneCP5_13p6TeV_pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 60835,
+        "negative_events": 0,
+        "nonfinite_events": 0,
+        "sum_signed": 112.58833539767674,
+        "sum_abs": 112.58833539767674,
+        "levels": [],
+        "sum_output": 112.58833539767674,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/WminusH-WtoLNu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 10754,
+        "negative_events": 239,
+        "nonfinite_events": 0,
+        "sum_signed": 2.1131014309693725,
+        "sum_abs": 2.1941956154415223,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 940,
+            "groups_used": 46,
+            "events_assigned": 5594
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 513,
+            "groups_used": 12,
+            "events_assigned": 762
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 191,
+            "groups_used": 28,
+            "events_assigned": 2231
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 54,
+            "groups_used": 19,
+            "events_assigned": 1566
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 12,
+            "groups_used": 5,
+            "events_assigned": 376
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 4,
+            "groups_used": 2,
+            "events_assigned": 177
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 48
+          }
+        ],
+        "sum_output": 2.1131014309693725,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/WplusH-WtoLNu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 22136,
+        "negative_events": 439,
+        "nonfinite_events": 0,
+        "sum_signed": 4.092094826547271,
+        "sum_abs": 4.228477384605421,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1233,
+            "groups_used": 89,
+            "events_assigned": 14522
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 618,
+            "groups_used": 28,
+            "events_assigned": 1663
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 210,
+            "groups_used": 48,
+            "events_assigned": 3557
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 55,
+            "groups_used": 21,
+            "events_assigned": 1778
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 13,
+            "groups_used": 6,
+            "events_assigned": 401
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 2,
+            "events_assigned": 144
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 71
+          }
+        ],
+        "sum_output": 4.092094826547271,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 21985,
+        "negative_events": 7128,
+        "nonfinite_events": 0,
+        "sum_signed": 61.44466006521703,
+        "sum_abs": 170.10938108541592,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 620,
+            "groups_used": 45,
+            "events_assigned": 15916
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 315,
+            "groups_used": 9,
+            "events_assigned": 1663
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 189,
+            "groups_used": 5,
+            "events_assigned": 526
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 58,
+            "groups_used": 13,
+            "events_assigned": 2149
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 14,
+            "groups_used": 4,
+            "events_assigned": 861
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 2,
+            "events_assigned": 593
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 277
+          }
+        ],
+        "sum_output": 61.44466006521705,
+        "closure_error": 2.1316282072803006e-14
+      },
+      "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 100312,
+        "negative_events": 31458,
+        "nonfinite_events": 0,
+        "sum_signed": 154.78902490620487,
+        "sum_abs": 397.2346896849151,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1218,
+            "groups_used": 138,
+            "events_assigned": 56688
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 552,
+            "groups_used": 43,
+            "events_assigned": 33104
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 223,
+            "groups_used": 35,
+            "events_assigned": 4911
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 57,
+            "groups_used": 22,
+            "events_assigned": 3968
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 13,
+            "groups_used": 6,
+            "events_assigned": 948
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 1,
+            "events_assigned": 218
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 1,
+            "events_assigned": 385
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 90
+          }
+        ],
+        "sum_output": 154.78902490620484,
+        "closure_error": -2.842170943040401e-14
+      },
+      "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 100159,
+        "negative_events": 29990,
+        "nonfinite_events": 0,
+        "sum_signed": 43.09393034781324,
+        "sum_abs": 102.94740368224875,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1391,
+            "groups_used": 169,
+            "events_assigned": 84276
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 668,
+            "groups_used": 40,
+            "events_assigned": 4460
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 230,
+            "groups_used": 43,
+            "events_assigned": 4733
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 59,
+            "groups_used": 28,
+            "events_assigned": 5353
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 13,
+            "groups_used": 9,
+            "events_assigned": 1167
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 3,
+            "groups_used": 1,
+            "events_assigned": 69
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 101
+          }
+        ],
+        "sum_output": 43.093930347813235,
+        "closure_error": -7.105427357601002e-15
+      },
+      "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 719,
+        "negative_events": 215,
+        "nonfinite_events": 0,
+        "sum_signed": 9.639822704201505,
+        "sum_abs": 22.54902153836349,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 289,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 188,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 109,
+            "groups_used": 1,
+            "events_assigned": 121
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 38,
+            "groups_used": 1,
+            "events_assigned": 50
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 12,
+            "groups_used": 3,
+            "events_assigned": 418
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 1,
+            "events_assigned": 119
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 11
+          }
+        ],
+        "sum_output": 9.639822704201507,
+        "closure_error": 1.7763568394002505e-15
+      },
+      "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 99737,
+        "negative_events": 28256,
+        "nonfinite_events": 0,
+        "sum_signed": 8.418882242103566,
+        "sum_abs": 18.864548165211946,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 971,
+            "groups_used": 165,
+            "events_assigned": 84717
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 497,
+            "groups_used": 26,
+            "events_assigned": 7026
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 234,
+            "groups_used": 17,
+            "events_assigned": 1630
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 59,
+            "groups_used": 32,
+            "events_assigned": 4783
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 10,
+            "groups_used": 5,
+            "events_assigned": 918
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 3,
+            "groups_used": 2,
+            "events_assigned": 507
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 156
+          }
+        ],
+        "sum_output": 8.418882242103567,
+        "closure_error": 1.7763568394002505e-15
+      },
+      "/home/zzq/eventsel-merged/ZH-Zto2L-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 4467,
+        "negative_events": 102,
+        "nonfinite_events": 0,
+        "sum_signed": 0.6757147174368905,
+        "sum_abs": 0.7004826384184621,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 659,
+            "groups_used": 14,
+            "events_assigned": 1344
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 390,
+            "groups_used": 8,
+            "events_assigned": 506
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 159,
+            "groups_used": 16,
+            "events_assigned": 1162
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 49,
+            "groups_used": 9,
+            "events_assigned": 752
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 12,
+            "groups_used": 7,
+            "events_assigned": 565
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 3,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 138
+          }
+        ],
+        "sum_output": 0.6757147174368905,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/ZH-Zto2Nu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 11832,
+        "negative_events": 280,
+        "nonfinite_events": 0,
+        "sum_signed": 3.0223698176163927,
+        "sum_abs": 3.1517675011888393,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1026,
+            "groups_used": 49,
+            "events_assigned": 6189
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 560,
+            "groups_used": 16,
+            "events_assigned": 979
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 199,
+            "groups_used": 31,
+            "events_assigned": 2300
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 55,
+            "groups_used": 19,
+            "events_assigned": 1642
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 12,
+            "groups_used": 9,
+            "events_assigned": 645
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 3,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 77
+          }
+        ],
+        "sum_output": 3.0223698176163927,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/ZZ_TuneCP5_13p6TeV_pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 9604,
+        "negative_events": 0,
+        "nonfinite_events": 0,
+        "sum_signed": 47.20090151212104,
+        "sum_abs": 47.20090151212104,
+        "levels": [],
+        "sum_output": 47.20090151212104,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 99926,
+        "negative_events": 32924,
+        "nonfinite_events": 0,
+        "sum_signed": 80.69605619874379,
+        "sum_abs": 229.49291925517747,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 979,
+            "groups_used": 118,
+            "events_assigned": 83870
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 452,
+            "groups_used": 30,
+            "events_assigned": 7896
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 227,
+            "groups_used": 19,
+            "events_assigned": 1880
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 61,
+            "groups_used": 30,
+            "events_assigned": 4663
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 13,
+            "groups_used": 5,
+            "events_assigned": 1019
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 2,
+            "events_assigned": 270
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 328
+          }
+        ],
+        "sum_output": 80.69605619874383,
+        "closure_error": 4.263256414560601e-14
+      },
+      "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 99780,
+        "negative_events": 31800,
+        "nonfinite_events": 0,
+        "sum_signed": 64.94649240871726,
+        "sum_abs": 171.96160561233364,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1310,
+            "groups_used": 172,
+            "events_assigned": 85292
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 593,
+            "groups_used": 27,
+            "events_assigned": 2402
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 225,
+            "groups_used": 38,
+            "events_assigned": 5135
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 59,
+            "groups_used": 23,
+            "events_assigned": 4019
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 13,
+            "groups_used": 7,
+            "events_assigned": 2236
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 4,
+            "groups_used": 2,
+            "events_assigned": 642
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 54
+          }
+        ],
+        "sum_output": 64.94649240871726,
+        "closure_error": 0.0
+      },
+      "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 99952,
+        "negative_events": 30297,
+        "nonfinite_events": 0,
+        "sum_signed": 10.072530316013962,
+        "sum_abs": 24.412416500701983,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 1394,
+            "groups_used": 166,
+            "events_assigned": 81165
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 685,
+            "groups_used": 36,
+            "events_assigned": 6698
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 231,
+            "groups_used": 55,
+            "events_assigned": 6024
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 58,
+            "groups_used": 24,
+            "events_assigned": 4012
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 12,
+            "groups_used": 7,
+            "events_assigned": 1315
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 4,
+            "groups_used": 1,
+            "events_assigned": 419
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 319
+          }
+        ],
+        "sum_output": 10.072530316013959,
+        "closure_error": -3.552713678800501e-15
+      },
+      "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 334,
+        "negative_events": 85,
+        "nonfinite_events": 0,
+        "sum_signed": 2.320255738392089,
+        "sum_abs": 4.719284296235449,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 168,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 125,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 100,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 45,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 14,
+            "groups_used": 1,
+            "events_assigned": 76
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 5,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 2,
+            "groups_used": 1,
+            "events_assigned": 209
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 49
+          }
+        ],
+        "sum_output": 2.3202557383920888,
+        "closure_error": -4.440892098500626e-16
+      },
+      "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+        "mode": "local_cancellation",
+        "events": 100297,
+        "negative_events": 28954,
+        "nonfinite_events": 0,
+        "sum_signed": 1.7943992980273498,
+        "sum_abs": 4.084736441771149,
+        "levels": [
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil",
+              "JetHT"
+            ],
+            "groups_considered": 953,
+            "groups_used": 180,
+            "events_assigned": 86793
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star",
+              "Recoil"
+            ],
+            "groups_considered": 484,
+            "groups_used": 15,
+            "events_assigned": 4862
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt",
+              "costheta_star"
+            ],
+            "groups_considered": 233,
+            "groups_used": 18,
+            "events_assigned": 1685
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets",
+              "Jet2Pt"
+            ],
+            "groups_considered": 61,
+            "groups_used": 37,
+            "events_assigned": 5762
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets",
+              "n_bjets"
+            ],
+            "groups_considered": 12,
+            "groups_used": 5,
+            "events_assigned": 743
+          },
+          {
+            "features": [
+              "has_jet2",
+              "njets"
+            ],
+            "groups_considered": 4,
+            "groups_used": 3,
+            "events_assigned": 402
+          },
+          {
+            "features": [
+              "has_jet2"
+            ],
+            "groups_considered": 1,
+            "groups_used": 0,
+            "events_assigned": 0
+          },
+          {
+            "features": [],
+            "groups_considered": 1,
+            "groups_used": 1,
+            "events_assigned": 50
+          }
+        ],
+        "sum_output": 1.7943992980273498,
+        "closure_error": 0.0
+      }
+    },
+    "splits": {
+      "train": {
+        "total": {
+          "events": 1705537,
+          "negative_events": 301369,
+          "sum_signed": 1972.503586305478,
+          "sum_local": 1972.503586305478,
+          "sum_loss": 1972.5035863054782,
+          "sumw2_signed": 17.029226764631463
+        },
+        "samples": {
+          "/home/zzq/eventsel-merged/BBDM-2HDMa-5f_TuneCP5_13p6TeV_madgraph-pythia8-RunIII2024Summer24NanoAODv15-FSMiniv6_FSNanov15_150X_mcRun3_2024_realistic_v2-v2_EVENTSELECTION.root": {
+            "events": 99972,
+            "negative_events": 0,
+            "sum_signed": 2.770163751294415,
+            "sum_local": 2.770163751294415,
+            "sum_loss": 121.68009005504845,
+            "sumw2_signed": 0.0004947413195127112
+          },
+          "/home/zzq/eventsel-merged/BBDM-2HDMa_500_EVENTSELECTION.root": {
+            "events": 18166,
+            "negative_events": 0,
+            "sum_signed": 19.68280259517059,
+            "sum_local": 19.68280259517059,
+            "sum_loss": 864.5717030976905,
+            "sumw2_signed": 0.14016021750668053
+          },
+          "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 4953,
+            "negative_events": 1615,
+            "sum_signed": 3.3398729119860837,
+            "sum_local": 3.339872911986084,
+            "sum_loss": 1.6891641758600957,
+            "sumw2_signed": 0.024970538817854618
+          },
+          "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 100052,
+            "negative_events": 32093,
+            "sum_signed": 33.580157571166325,
+            "sum_local": 33.58015757116631,
+            "sum_loss": 16.983400471732573,
+            "sumw2_signed": 0.11946875525203536
+          },
+          "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 99578,
+            "negative_events": 30227,
+            "sum_signed": 8.59117635951884,
+            "sum_local": 8.591176359518837,
+            "sum_loss": 4.345047766013871,
+            "sumw2_signed": 0.006783087690066826
+          },
+          "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 747,
+            "negative_events": 245,
+            "sum_signed": 1.5778286119357654,
+            "sum_local": 1.5778286119357658,
+            "sum_loss": 0.7979978990709757,
+            "sumw2_signed": 0.04686980975351428
+          },
+          "/home/zzq/eventsel-merged/GluGluH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 23,
+            "negative_events": 0,
+            "sum_signed": 0.2043050524243352,
+            "sum_local": 0.2043050524243352,
+            "sum_loss": 0.10332871477351703,
+            "sumw2_signed": 0.002788248757653112
+          },
+          "/home/zzq/eventsel-merged/GluGluZH-Zto2L-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 6058,
+            "negative_events": 0,
+            "sum_signed": 2.0216942620949556,
+            "sum_local": 2.0216942620949556,
+            "sum_loss": 1.0224860682025074,
+            "sumw2_signed": 0.0010286149132818154
+          },
+          "/home/zzq/eventsel-merged/TBbarQtoLNu-t-channel-4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8_EVENTSELECTION.root": {
+            "events": 63355,
+            "negative_events": 5499,
+            "sum_signed": 313.74845353450763,
+            "sum_local": 313.74845353450763,
+            "sum_loss": 158.68048333217664,
+            "sumw2_signed": 3.3873671211824687
+          },
+          "/home/zzq/eventsel-merged/TBbartoLplusNuBbar-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8_EVENTSELECTION.root": {
+            "events": 22803,
+            "negative_events": 3745,
+            "sum_signed": 6.981101927125375,
+            "sum_local": 6.981101927125375,
+            "sum_loss": 3.53074131683523,
+            "sumw2_signed": 0.006797858063432048
+          },
+          "/home/zzq/eventsel-merged/TTH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 14871,
+            "negative_events": 520,
+            "sum_signed": 6.521329812470677,
+            "sum_local": 6.521329812470677,
+            "sum_loss": 3.2982083415992576,
+            "sumw2_signed": 0.004962080588096832
+          },
+          "/home/zzq/eventsel-merged/TTto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 100166,
+            "negative_events": 745,
+            "sum_signed": 36.93369372328589,
+            "sum_local": 36.93369372328589,
+            "sum_loss": 18.67947492722542,
+            "sumw2_signed": 0.021527305269566123
+          },
+          "/home/zzq/eventsel-merged/TTto4Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 810,
+            "negative_events": 17,
+            "sum_signed": 2.8363519081852315,
+            "sum_local": 2.8363519081852315,
+            "sum_loss": 1.4345048927594881,
+            "sumw2_signed": 0.020536387016315667
+          },
+          "/home/zzq/eventsel-merged/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 99777,
+            "negative_events": 1215,
+            "sum_signed": 161.7019845026215,
+            "sum_local": 161.70198450262154,
+            "sum_loss": 81.78191403842575,
+            "sumw2_signed": 0.41442236064337196
+          },
+          "/home/zzq/eventsel-merged/TWminustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 67302,
+            "negative_events": 20,
+            "sum_signed": 176.21019627601746,
+            "sum_local": 176.21019627601746,
+            "sum_loss": 89.11954401095036,
+            "sumw2_signed": 0.6982709183609666
+          },
+          "/home/zzq/eventsel-merged/TbarBQtoLNu-t-channel-4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8_EVENTSELECTION.root": {
+            "events": 15690,
+            "negative_events": 1357,
+            "sum_signed": 105.14814505675622,
+            "sum_local": 105.14814505675622,
+            "sum_loss": 53.17941265088277,
+            "sumw2_signed": 1.486453493476037
+          },
+          "/home/zzq/eventsel-merged/TbarBtoLminusNuB-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8_EVENTSELECTION.root": {
+            "events": 11099,
+            "negative_events": 1858,
+            "sum_signed": 3.286491978978263,
+            "sum_local": 3.2864919789782627,
+            "sum_loss": 1.662166394181876,
+            "sumw2_signed": 0.0031623738384934648
+          },
+          "/home/zzq/eventsel-merged/TbarWplustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 96995,
+            "negative_events": 46,
+            "sum_signed": 240.41188748444867,
+            "sum_local": 240.41188748444864,
+            "sum_loss": 121.5900001261278,
+            "sumw2_signed": 0.9011291013175338
+          },
+          "/home/zzq/eventsel-merged/VBFH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 78,
+            "negative_events": 0,
+            "sum_signed": 0.05542466485815561,
+            "sum_local": 0.05542466485815561,
+            "sum_loss": 0.028031413411409023,
+            "sumw2_signed": 5.419285854119655e-05
+          },
+          "/home/zzq/eventsel-merged/WW_TuneCP5_13p6TeV_pythia8_EVENTSELECTION.root": {
+            "events": 40213,
+            "negative_events": 0,
+            "sum_signed": 239.99195239282898,
+            "sum_local": 239.99195239282898,
+            "sum_loss": 121.37761500500393,
+            "sumw2_signed": 2.1520863266986763
+          },
+          "/home/zzq/eventsel-merged/WZ_TuneCP5_13p6TeV_pythia8_EVENTSELECTION.root": {
+            "events": 60835,
+            "negative_events": 0,
+            "sum_signed": 112.58833539767674,
+            "sum_local": 112.58833539767674,
+            "sum_loss": 56.94234115644372,
+            "sumw2_signed": 0.3157615753693036
+          },
+          "/home/zzq/eventsel-merged/WminusH-WtoLNu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 10754,
+            "negative_events": 239,
+            "sum_signed": 2.1131014309693725,
+            "sum_local": 2.1131014309693725,
+            "sum_loss": 1.0687158856681194,
+            "sumw2_signed": 0.0006561848919003682
+          },
+          "/home/zzq/eventsel-merged/WplusH-WtoLNu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 22136,
+            "negative_events": 439,
+            "sum_signed": 4.092094826547271,
+            "sum_local": 4.092094826547271,
+            "sum_loss": 2.069605690809256,
+            "sumw2_signed": 0.0012096205618806791
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 21985,
+            "negative_events": 7128,
+            "sum_signed": 61.44466006521703,
+            "sum_local": 61.44466006521705,
+            "sum_loss": 31.076068256245836,
+            "sumw2_signed": 1.9620302954946376
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 100312,
+            "negative_events": 31458,
+            "sum_signed": 154.78902490620487,
+            "sum_local": 154.78902490620484,
+            "sum_loss": 78.28563618380181,
+            "sumw2_signed": 2.3514693848439654
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 100159,
+            "negative_events": 29990,
+            "sum_signed": 43.09393034781324,
+            "sum_local": 43.093930347813235,
+            "sum_loss": 21.795057853638355,
+            "sumw2_signed": 0.16316671815949324
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 719,
+            "negative_events": 215,
+            "sum_signed": 9.639822704201505,
+            "sum_local": 9.639822704201507,
+            "sum_loss": 4.875408017814967,
+            "sumw2_signed": 1.0910672902739424
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 99737,
+            "negative_events": 28256,
+            "sum_signed": 8.418882242103566,
+            "sum_local": 8.418882242103567,
+            "sum_loss": 4.257908806383145,
+            "sumw2_signed": 0.0056037984924285
+          },
+          "/home/zzq/eventsel-merged/ZH-Zto2L-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 4467,
+            "negative_events": 102,
+            "sum_signed": 0.6757147174368905,
+            "sum_local": 0.6757147174368905,
+            "sum_loss": 0.3417474628150098,
+            "sumw2_signed": 0.00016670603794886782
+          },
+          "/home/zzq/eventsel-merged/ZH-Zto2Nu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 11832,
+            "negative_events": 280,
+            "sum_signed": 3.0223698176163927,
+            "sum_local": 3.0223698176163927,
+            "sum_loss": 1.5285847565626456,
+            "sumw2_signed": 0.0012453083097114898
+          },
+          "/home/zzq/eventsel-merged/ZZ_TuneCP5_13p6TeV_pythia8_EVENTSELECTION.root": {
+            "events": 9604,
+            "negative_events": 0,
+            "sum_signed": 47.20090151212104,
+            "sum_local": 47.20090151212104,
+            "sum_loss": 23.8721873567229,
+            "sumw2_signed": 0.36323963211882443
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 99926,
+            "negative_events": 32924,
+            "sum_signed": 80.69605619874379,
+            "sum_local": 80.69605619874383,
+            "sum_loss": 40.812597022757316,
+            "sumw2_signed": 0.7673793412811792
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 99780,
+            "negative_events": 31800,
+            "sum_signed": 64.94649240871726,
+            "sum_local": 64.94649240871726,
+            "sum_loss": 32.847144551778065,
+            "sumw2_signed": 0.4448305272995895
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 99952,
+            "negative_events": 30297,
+            "sum_signed": 10.072530316013962,
+            "sum_local": 10.072530316013959,
+            "sum_loss": 5.094252930707456,
+            "sumw2_signed": 0.0091580699896828
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 334,
+            "negative_events": 85,
+            "sum_signed": 2.320255738392089,
+            "sum_local": 2.3202557383920888,
+            "sum_loss": 1.17348563116286,
+            "sumw2_signed": 0.112651513852326
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 100297,
+            "negative_events": 28954,
+            "sum_signed": 1.7943992980273498,
+            "sum_local": 1.7943992980273498,
+            "sum_loss": 0.9075300441937689,
+            "sumw2_signed": 0.00025726433054508
+          }
+        }
+      },
+      "validation": {
+        "total": {
+          "events": 682215,
+          "negative_events": 120514,
+          "sum_signed": 784.5949330253154,
+          "sum_local": 786.2606782667127,
+          "sum_loss": 792.9643384582224,
+          "sumw2_signed": 6.653154252054371
+        },
+        "samples": {
+          "/home/zzq/eventsel-merged/BBDM-2HDMa-5f_TuneCP5_13p6TeV_madgraph-pythia8-RunIII2024Summer24NanoAODv15-FSMiniv6_FSNanov15_150X_mcRun3_2024_realistic_v2-v2_EVENTSELECTION.root": {
+            "events": 39888,
+            "negative_events": 0,
+            "sum_signed": 1.1070112064681257,
+            "sum_local": 1.1070112064681257,
+            "sum_loss": 48.625725909541465,
+            "sumw2_signed": 0.0002027986103263238
+          },
+          "/home/zzq/eventsel-merged/BBDM-2HDMa_500_EVENTSELECTION.root": {
+            "events": 7367,
+            "negative_events": 0,
+            "sum_signed": 7.99737029138949,
+            "sum_local": 7.99737029138949,
+            "sum_loss": 351.2863587234265,
+            "sumw2_signed": 0.05573378319173336
+          },
+          "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 1946,
+            "negative_events": 657,
+            "sum_signed": 1.2471270811879207,
+            "sum_local": 1.3244999635777281,
+            "sum_loss": 0.6698751564391328,
+            "sumw2_signed": 0.010393550970736066
+          },
+          "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 40173,
+            "negative_events": 12720,
+            "sum_signed": 13.66278755308747,
+            "sum_local": 13.457034944632255,
+            "sum_loss": 6.805989910631954,
+            "sumw2_signed": 0.04793820884518543
+          },
+          "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 40423,
+            "negative_events": 12387,
+            "sum_signed": 3.4154902487830414,
+            "sum_local": 3.476165719090077,
+            "sum_loss": 1.7580952200208668,
+            "sumw2_signed": 0.0026599303759367258
+          },
+          "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 279,
+            "negative_events": 115,
+            "sum_signed": 0.29655741171130845,
+            "sum_local": 0.5488300897049442,
+            "sum_loss": 0.2775746714303533,
+            "sumw2_signed": 0.013605115096968755
+          },
+          "/home/zzq/eventsel-merged/GluGluH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 7,
+            "negative_events": 0,
+            "sum_signed": 0.05176605654420602,
+            "sum_local": 0.05176605654420602,
+            "sum_loss": 0.026181046568033366,
+            "sumw2_signed": 0.0004860424297719741
+          },
+          "/home/zzq/eventsel-merged/GluGluZH-Zto2L-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 2415,
+            "negative_events": 0,
+            "sum_signed": 0.788969805682062,
+            "sum_local": 0.788969805682062,
+            "sum_loss": 0.39902701890562026,
+            "sumw2_signed": 0.000379234211880591
+          },
+          "/home/zzq/eventsel-merged/TBbarQtoLNu-t-channel-4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8_EVENTSELECTION.root": {
+            "events": 25167,
+            "negative_events": 2275,
+            "sum_signed": 123.09378078751134,
+            "sum_local": 124.13157846490353,
+            "sum_loss": 62.78041738755694,
+            "sumw2_signed": 1.321760634313746
+          },
+          "/home/zzq/eventsel-merged/TBbartoLplusNuBbar-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8_EVENTSELECTION.root": {
+            "events": 9043,
+            "negative_events": 1509,
+            "sum_signed": 2.8004706210551706,
+            "sum_local": 2.8077151208333673,
+            "sum_loss": 1.4200216364856053,
+            "sumw2_signed": 0.0027823828751078936
+          },
+          "/home/zzq/eventsel-merged/TTH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 5795,
+            "negative_events": 198,
+            "sum_signed": 2.520736911568115,
+            "sum_local": 2.5104900667135186,
+            "sum_loss": 1.2696979784249844,
+            "sumw2_signed": 0.001931091947163389
+          },
+          "/home/zzq/eventsel-merged/TTto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 39913,
+            "negative_events": 274,
+            "sum_signed": 14.63422273440232,
+            "sum_local": 14.61706322232083,
+            "sum_loss": 7.392682357109209,
+            "sumw2_signed": 0.008459216738853402
+          },
+          "/home/zzq/eventsel-merged/TTto4Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 323,
+            "negative_events": 6,
+            "sum_signed": 1.114995366818317,
+            "sum_local": 1.0842939888280099,
+            "sum_loss": 0.548389298124393,
+            "sumw2_signed": 0.0068645194600068845
+          },
+          "/home/zzq/eventsel-merged/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 39887,
+            "negative_events": 456,
+            "sum_signed": 65.02484783574684,
+            "sum_local": 64.8797016068813,
+            "sum_loss": 32.8133646347838,
+            "sumw2_signed": 0.17331507177868927
+          },
+          "/home/zzq/eventsel-merged/TWminustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 27026,
+            "negative_events": 10,
+            "sum_signed": 70.80218618811,
+            "sum_local": 70.80914399924009,
+            "sum_loss": 35.81222175777616,
+            "sumw2_signed": 0.2757471580229674
+          },
+          "/home/zzq/eventsel-merged/TbarBQtoLNu-t-channel-4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8_EVENTSELECTION.root": {
+            "events": 6344,
+            "negative_events": 577,
+            "sum_signed": 41.238553466867934,
+            "sum_local": 42.26165087864534,
+            "sum_loss": 21.374126668329797,
+            "sumw2_signed": 0.5878860634191541
+          },
+          "/home/zzq/eventsel-merged/TbarBtoLminusNuB-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8_EVENTSELECTION.root": {
+            "events": 4480,
+            "negative_events": 685,
+            "sum_signed": 1.3969278834820922,
+            "sum_local": 1.3555347212225852,
+            "sum_loss": 0.6855712030258334,
+            "sumw2_signed": 0.001296412922154763
+          },
+          "/home/zzq/eventsel-merged/TbarWplustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 38809,
+            "negative_events": 6,
+            "sum_signed": 95.36695781051398,
+            "sum_local": 95.31246535194425,
+            "sum_loss": 48.204948579816396,
+            "sumw2_signed": 0.3488012905364355
+          },
+          "/home/zzq/eventsel-merged/VBFH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 51,
+            "negative_events": 0,
+            "sum_signed": 0.03606867100704605,
+            "sum_local": 0.03606867100704605,
+            "sum_loss": 0.018241983614806386,
+            "sumw2_signed": 3.937751015394147e-05
+          },
+          "/home/zzq/eventsel-merged/WW_TuneCP5_13p6TeV_pythia8_EVENTSELECTION.root": {
+            "events": 16103,
+            "negative_events": 0,
+            "sum_signed": 95.19856836624865,
+            "sum_local": 95.19856836624865,
+            "sum_loss": 48.1473443795832,
+            "sumw2_signed": 0.8451955420314796
+          },
+          "/home/zzq/eventsel-merged/WZ_TuneCP5_13p6TeV_pythia8_EVENTSELECTION.root": {
+            "events": 24472,
+            "negative_events": 0,
+            "sum_signed": 45.20569334349846,
+            "sum_local": 45.20569334349846,
+            "sum_loss": 22.863096816263813,
+            "sumw2_signed": 0.1253717300063359
+          },
+          "/home/zzq/eventsel-merged/WminusH-WtoLNu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 4340,
+            "negative_events": 99,
+            "sum_signed": 0.8455448200243898,
+            "sum_local": 0.8424656463702875,
+            "sum_loss": 0.42608291595001835,
+            "sumw2_signed": 0.0002638048200435015
+          },
+          "/home/zzq/eventsel-merged/WplusH-WtoLNu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 8906,
+            "negative_events": 185,
+            "sum_signed": 1.650130105924406,
+            "sum_local": 1.656769510960006,
+            "sum_loss": 0.8379228130290464,
+            "sumw2_signed": 0.0004837324848604769
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 8880,
+            "negative_events": 2846,
+            "sum_signed": 25.843119477793138,
+            "sum_local": 24.72624130768817,
+            "sum_loss": 12.505470154486215,
+            "sumw2_signed": 0.7599070509826209
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 39899,
+            "negative_events": 12437,
+            "sum_signed": 61.42763766079042,
+            "sum_local": 61.4338164952153,
+            "sum_loss": 31.070584044580286,
+            "sumw2_signed": 0.9246893797615332
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 40000,
+            "negative_events": 11880,
+            "sum_signed": 17.22374088634828,
+            "sum_local": 17.07221165306143,
+            "sum_loss": 8.634390914564472,
+            "sumw2_signed": 0.06389311971329406
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 276,
+            "negative_events": 80,
+            "sum_signed": 3.6198388897719767,
+            "sum_local": 3.510095775808318,
+            "sum_loss": 1.7752555844430185,
+            "sumw2_signed": 0.40427988913640134
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 40310,
+            "negative_events": 11387,
+            "sum_signed": 3.405411744109923,
+            "sum_local": 3.416414794721673,
+            "sum_loss": 1.7278757704856997,
+            "sumw2_signed": 0.0022914054759475356
+          },
+          "/home/zzq/eventsel-merged/ZH-Zto2L-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 1719,
+            "negative_events": 38,
+            "sum_signed": 0.258717940489997,
+            "sum_local": 0.25924107211428593,
+            "sum_loss": 0.13111299246012748,
+            "sumw2_signed": 6.518703964233363e-05
+          },
+          "/home/zzq/eventsel-merged/ZH-Zto2Nu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 4683,
+            "negative_events": 123,
+            "sum_signed": 1.1972248275175825,
+            "sum_local": 1.1980578590861541,
+            "sum_loss": 0.6059261742904325,
+            "sumw2_signed": 0.0005084007510999832
+          },
+          "/home/zzq/eventsel-merged/ZZ_TuneCP5_13p6TeV_pythia8_EVENTSELECTION.root": {
+            "events": 3916,
+            "negative_events": 0,
+            "sum_signed": 19.252168696401764,
+            "sum_local": 19.252168696401764,
+            "sum_loss": 9.736919495609992,
+            "sumw2_signed": 0.14231268157858887
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 39891,
+            "negative_events": 13142,
+            "sum_signed": 32.62652903782181,
+            "sum_local": 32.27721064631428,
+            "sum_loss": 16.324425915961722,
+            "sumw2_signed": 0.30678599107691773
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 39896,
+            "negative_events": 12894,
+            "sum_signed": 25.12550395523389,
+            "sum_local": 26.150757951083506,
+            "sum_loss": 13.225929449001402,
+            "sumw2_signed": 0.18152348720972558
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 39939,
+            "negative_events": 12077,
+            "sum_signed": 3.991458794888623,
+            "sum_local": 4.052905191656013,
+            "sum_loss": 2.0497852577964375,
+            "sumw2_signed": 0.003654671828835133
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 114,
+            "negative_events": 39,
+            "sum_signed": 0.4177166235821385,
+            "sum_local": 0.7381825258570106,
+            "sum_loss": 0.37334099553569383,
+            "sumw2_signed": 0.03154306114397682
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 39535,
+            "negative_events": 11412,
+            "sum_signed": 0.7090999229330308,
+            "sum_local": 0.7125232609982238,
+            "sum_loss": 0.36036364216909683,
+            "sumw2_signed": 0.00010323375609656988
+          }
+        }
+      },
+      "test": {
+        "total": {
+          "events": 1023323,
+          "negative_events": 180621,
+          "sum_signed": 1179.3586841439821,
+          "sum_local": 1179.9216092618697,
+          "sum_loss": 1181.1289685188228,
+          "sumw2_signed": 9.981840781487914
+        },
+        "samples": {
+          "/home/zzq/eventsel-merged/BBDM-2HDMa-5f_TuneCP5_13p6TeV_madgraph-pythia8-RunIII2024Summer24NanoAODv15-FSMiniv6_FSNanov15_150X_mcRun3_2024_realistic_v2-v2_EVENTSELECTION.root": {
+            "events": 60140,
+            "negative_events": 0,
+            "sum_signed": 1.6603038812390347,
+            "sum_local": 1.6603038812390347,
+            "sum_loss": 72.92923593181504,
+            "sumw2_signed": 0.0002952558192638817
+          },
+          "/home/zzq/eventsel-merged/BBDM-2HDMa_500_EVENTSELECTION.root": {
+            "events": 10743,
+            "negative_events": 0,
+            "sum_signed": 11.798525546135382,
+            "sum_local": 11.798525546135382,
+            "sum_loss": 518.2529914701645,
+            "sumw2_signed": 0.08479646430259236
+          },
+          "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 3048,
+            "negative_events": 978,
+            "sum_signed": 2.1425168130776173,
+            "sum_local": 2.032807354227283,
+            "sum_loss": 1.0281065925780284,
+            "sumw2_signed": 0.015395051784067582
+          },
+          "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 59775,
+            "negative_events": 19373,
+            "sum_signed": 19.82502634639408,
+            "sum_local": 19.93022689929953,
+            "sum_loss": 10.079852192651417,
+            "sumw2_signed": 0.07466037127790218
+          },
+          "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 59999,
+            "negative_events": 18419,
+            "sum_signed": 5.114971761935352,
+            "sum_local": 5.176627892837984,
+            "sum_loss": 2.6181159040390725,
+            "sumw2_signed": 0.0040553202989775175
+          },
+          "/home/zzq/eventsel-merged/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 419,
+            "negative_events": 133,
+            "sum_signed": 0.9356164703419351,
+            "sum_local": 0.8616556633562915,
+            "sum_loss": 0.43578840178170186,
+            "sumw2_signed": 0.02182449175324014
+          },
+          "/home/zzq/eventsel-merged/GluGluH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 6,
+            "negative_events": 0,
+            "sum_signed": 0.0941564177891011,
+            "sum_local": 0.0941564177891011,
+            "sum_loss": 0.047620269407822456,
+            "sumw2_signed": 0.0036798578888887733
+          },
+          "/home/zzq/eventsel-merged/GluGluZH-Zto2L-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 3625,
+            "negative_events": 0,
+            "sum_signed": 1.1668135202462748,
+            "sum_local": 1.1668135202462748,
+            "sum_loss": 0.5901241305427936,
+            "sumw2_signed": 0.0005536776179972465
+          },
+          "/home/zzq/eventsel-merged/TBbarQtoLNu-t-channel-4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8_EVENTSELECTION.root": {
+            "events": 37855,
+            "negative_events": 3290,
+            "sum_signed": 185.35408564274624,
+            "sum_local": 186.159476105134,
+            "sum_loss": 94.15146214251703,
+            "sumw2_signed": 1.9908019322371657
+          },
+          "/home/zzq/eventsel-merged/TBbartoLplusNuBbar-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8_EVENTSELECTION.root": {
+            "events": 13545,
+            "negative_events": 2082,
+            "sum_signed": 4.390388660702794,
+            "sum_local": 4.241301601767441,
+            "sum_loss": 2.145068065019072,
+            "sumw2_signed": 0.004179307541055042
+          },
+          "/home/zzq/eventsel-merged/TTH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 8950,
+            "negative_events": 287,
+            "sum_signed": 3.9359669013568963,
+            "sum_local": 3.9146761525250415,
+            "sum_loss": 1.9798749506929392,
+            "sumw2_signed": 0.002916455984324805
+          },
+          "/home/zzq/eventsel-merged/TTto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 59921,
+            "negative_events": 438,
+            "sum_signed": 22.00189957070476,
+            "sum_local": 21.992583484125497,
+            "sum_loss": 11.122903516082049,
+            "sumw2_signed": 0.012794268361267
+          },
+          "/home/zzq/eventsel-merged/TTto4Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 531,
+            "negative_events": 5,
+            "sum_signed": 1.893741808374572,
+            "sum_local": 1.8776093755168108,
+            "sum_loss": 0.9496141251362853,
+            "sumw2_signed": 0.010585503564615012
+          },
+          "/home/zzq/eventsel-merged/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 60336,
+            "negative_events": 713,
+            "sum_signed": 97.63443632956879,
+            "sum_local": 97.62225246243665,
+            "sum_loss": 49.37313962891444,
+            "sumw2_signed": 0.24927208517295768
+          },
+          "/home/zzq/eventsel-merged/TWminustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 40424,
+            "negative_events": 15,
+            "sum_signed": 106.14113929236855,
+            "sum_local": 106.1432498172044,
+            "sum_loss": 53.682693870519756,
+            "sumw2_signed": 0.4190931908008036
+          },
+          "/home/zzq/eventsel-merged/TbarBQtoLNu-t-channel-4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8_EVENTSELECTION.root": {
+            "events": 9440,
+            "negative_events": 760,
+            "sum_signed": 63.48836042047941,
+            "sum_local": 62.914112272731835,
+            "sum_loss": 31.819254027825536,
+            "sumw2_signed": 0.8797572592668315
+          },
+          "/home/zzq/eventsel-merged/TbarBtoLminusNuB-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8_EVENTSELECTION.root": {
+            "events": 6804,
+            "negative_events": 1132,
+            "sum_signed": 2.028809062143225,
+            "sum_local": 2.0698061577871494,
+            "sum_loss": 1.046818997262267,
+            "sumw2_signed": 0.0020430691853322728
+          },
+          "/home/zzq/eventsel-merged/TbarWplustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 58303,
+            "negative_events": 13,
+            "sum_signed": 144.82487885199518,
+            "sum_local": 144.77850263766777,
+            "sum_loss": 73.22274425848984,
+            "sumw2_signed": 0.5421640206920643
+          },
+          "/home/zzq/eventsel-merged/VBFH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_EVENTSELECTION.root": {
+            "events": 57,
+            "negative_events": 0,
+            "sum_signed": 0.04127984698604277,
+            "sum_local": 0.04127984698604277,
+            "sum_loss": 0.020877572455996588,
+            "sumw2_signed": 4.593991775124101e-05
+          },
+          "/home/zzq/eventsel-merged/WW_TuneCP5_13p6TeV_pythia8_EVENTSELECTION.root": {
+            "events": 24080,
+            "negative_events": 0,
+            "sum_signed": 143.42150370394364,
+            "sum_local": 143.42150370394364,
+            "sum_loss": 72.53643251971052,
+            "sumw2_signed": 1.284649402130718
+          },
+          "/home/zzq/eventsel-merged/WZ_TuneCP5_13p6TeV_pythia8_EVENTSELECTION.root": {
+            "events": 36274,
+            "negative_events": 0,
+            "sum_signed": 67.03585536796197,
+            "sum_local": 67.03585536796197,
+            "sum_loss": 33.90385453869385,
+            "sumw2_signed": 0.18636611539004128
+          },
+          "/home/zzq/eventsel-merged/WminusH-WtoLNu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 6299,
+            "negative_events": 151,
+            "sum_signed": 1.231490551055516,
+            "sum_local": 1.2329872911106343,
+            "sum_loss": 0.6235919797907401,
+            "sumw2_signed": 0.00038903500860439024
+          },
+          "/home/zzq/eventsel-merged/WplusH-WtoLNu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 13324,
+            "negative_events": 271,
+            "sum_signed": 2.489547497657221,
+            "sum_local": 2.5014176499302843,
+            "sum_loss": 1.2651095399356895,
+            "sumw2_signed": 0.0007590543783234716
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 12989,
+            "negative_events": 4230,
+            "sum_signed": 36.89223135756403,
+            "sum_local": 36.28724618041048,
+            "sum_loss": 18.35252954344176,
+            "sumw2_signed": 1.1773714269652553
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 59789,
+            "negative_events": 18975,
+            "sum_signed": 90.17618523908598,
+            "sum_local": 91.73489355650601,
+            "sum_loss": 46.395566524668624,
+            "sumw2_signed": 1.3920962860042105
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 59841,
+            "negative_events": 17790,
+            "sum_signed": 25.61275674072114,
+            "sum_local": 25.65886662366576,
+            "sum_loss": 12.977151956388298,
+            "sumw2_signed": 0.09508152588075687
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 424,
+            "negative_events": 124,
+            "sum_signed": 4.969994148840707,
+            "sum_local": 5.25751918117056,
+            "sum_loss": 2.6590272410843205,
+            "sumw2_signed": 0.5200511037996335
+          },
+          "/home/zzq/eventsel-merged/WtoLNu-2Jets_Bin-2J-PTLNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 59953,
+            "negative_events": 16903,
+            "sum_signed": 5.040284636432789,
+            "sum_local": 5.074609390118772,
+            "sum_loss": 2.566519329974911,
+            "sumw2_signed": 0.00330501188757972
+          },
+          "/home/zzq/eventsel-merged/ZH-Zto2L-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 2659,
+            "negative_events": 64,
+            "sum_signed": 0.40118475492601724,
+            "sum_local": 0.4020024748018125,
+            "sum_loss": 0.203315574255944,
+            "sumw2_signed": 9.871701926404919e-05
+          },
+          "/home/zzq/eventsel-merged/ZH-Zto2Nu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8_EVENTSELECTION.root": {
+            "events": 7101,
+            "negative_events": 157,
+            "sum_signed": 1.8578284708055703,
+            "sum_local": 1.846224916448489,
+            "sum_loss": 0.9337412145992697,
+            "sumw2_signed": 0.000785694768579532
+          },
+          "/home/zzq/eventsel-merged/ZZ_TuneCP5_13p6TeV_pythia8_EVENTSELECTION.root": {
+            "events": 5702,
+            "negative_events": 0,
+            "sum_signed": 27.979929093335144,
+            "sum_local": 27.979929093335144,
+            "sum_loss": 14.151045597559044,
+            "sumw2_signed": 0.20762725235836083
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 60183,
+            "negative_events": 19801,
+            "sum_signed": 50.1836439444028,
+            "sum_local": 49.11090801189049,
+            "sum_loss": 24.838186554923503,
+            "sumw2_signed": 0.4748101504994049
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 60324,
+            "negative_events": 19146,
+            "sum_signed": 39.288710598831074,
+            "sum_local": 39.626373469548355,
+            "sum_loss": 20.041316615311054,
+            "sumw2_signed": 0.2666955916229521
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 60109,
+            "negative_events": 17906,
+            "sum_signed": 6.189173139354667,
+            "sum_local": 6.041790671694646,
+            "sum_loss": 3.05567805410999,
+            "sumw2_signed": 0.005427236879566783
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 183,
+            "negative_events": 58,
+            "sum_signed": 1.0314189326302907,
+            "sum_local": 1.1509384682112591,
+            "sum_loss": 0.5820952115108063,
+            "sumw2_signed": 0.047257048837249085
+          },
+          "/home/zzq/eventsel-merged/Zto2Nu-2Jets_Bin-2J-PTNuNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_EVENTSELECTION.root": {
+            "events": 60168,
+            "negative_events": 17407,
+            "sum_signed": 1.0840288218487901,
+            "sum_local": 1.0825761221077925,
+            "sum_loss": 0.5475204749687934,
+            "sumw2_signed": 0.0001566045903152547
+          }
+        }
+      }
+    }
+  },
+  "score_diagnostics": {
+    "train": {
+      "background_signed_yield": 1950.0506199590172,
+      "background_local_yield": 1950.0506199590177,
+      "background_sumw2": 16.88857180580527,
+      "background_local_vs_signed_tv": 0.002748664277547408,
+      "signal_signed_yield": 22.45296634646516,
+      "signal_local_yield": 22.45296634646516,
+      "signal_sumw2": 0.14065495882619322,
+      "signal_local_vs_signed_tv": 0.0,
+      "asimov_z_signed": 2.3870776423416737,
+      "asimov_z_signed_syst": 2.122687579388147
+    },
+    "validation": {
+      "background_signed_yield": 775.4905515274587,
+      "background_local_yield": 777.1562967688527,
+      "background_sumw2": 6.597217670252308,
+      "background_local_vs_signed_tv": 0.005242723425840863,
+      "signal_signed_yield": 9.104381497857588,
+      "signal_local_yield": 9.104381497857588,
+      "signal_sumw2": 0.05593658180205968,
+      "signal_local_vs_signed_tv": 0.0,
+      "asimov_z_signed": 1.4283944114484415,
+      "asimov_z_signed_syst": 1.3589688264315098
+    },
+    "test": {
+      "background_signed_yield": 1165.899854716606,
+      "background_local_yield": 1166.4627798344961,
+      "background_sumw2": 9.896749061366052,
+      "background_local_vs_signed_tv": 0.004192112785479685,
+      "signal_signed_yield": 13.458829427374402,
+      "signal_local_yield": 13.458829427374402,
+      "signal_sumw2": 0.08509172012185624,
+      "signal_local_vs_signed_tv": 0.0,
+      "asimov_z_signed": 1.6579600877071738,
+      "asimov_z_signed_syst": 1.5359666311979827
+    }
   },
   "used_samples": {},
   "model_spec": {
@@ -129,244 +3858,244 @@
     "parametric": false,
     "mass_grid": null
   },
-  "auc_train": 0.9864592296983684,
-  "auc_val": 0.9795838320633703,
-  "auc_test": 0.9796983565969382,
-  "n_train": 735902,
-  "n_val": 294361,
-  "n_test": 441542,
+  "auc_train": 0.966325643824192,
+  "auc_val": 0.9495321698900537,
+  "auc_test": 0.9513901145616139,
+  "n_train": 1705537,
+  "n_val": 682215,
+  "n_test": 1023323,
   "seed": 7,
   "top_feature_dnn_scores": [
     {
       "feature": "costheta_star",
       "source": "branch:costheta_star",
-      "feature_asimov_z": 0.11530017675944013,
-      "dnn_auc_train": 0.5455053427046184,
-      "dnn_auc_test": 0.5425652859161135
+      "feature_asimov_z": 0.5056889737104806,
+      "dnn_auc_train": 0.5930782883914123,
+      "dnn_auc_test": 0.5951080476161092
     },
     {
       "feature": "JetHT",
       "source": "branch:JetHT",
-      "feature_asimov_z": 0.12607838539077465,
-      "dnn_auc_train": 0.5909404071326078,
-      "dnn_auc_test": 0.5899011730755609
+      "feature_asimov_z": 0.5104097801863121,
+      "dnn_auc_train": 0.5348315878861571,
+      "dnn_auc_test": 0.5290277218667765
     },
     {
       "feature": "Jet1BTagScore",
       "source": "branch:Jet1BTagScore",
-      "feature_asimov_z": 0.36800170984502556,
-      "dnn_auc_train": 0.9051959993538111,
-      "dnn_auc_test": 0.9058331053010757
+      "feature_asimov_z": 0.8756199099295904,
+      "dnn_auc_train": 0.8075658660545052,
+      "dnn_auc_test": 0.8026842228946645
     },
     {
       "feature": "dRJet12",
       "source": "branch:dRJet12",
-      "feature_asimov_z": 0.11649251307831346,
-      "dnn_auc_train": 0.5554989142866202,
-      "dnn_auc_test": 0.550057298835556
+      "feature_asimov_z": 0.5191560495551076,
+      "dnn_auc_train": 0.5937472919757373,
+      "dnn_auc_test": 0.6018152087731756
     },
     {
       "feature": "dPhiJet12",
       "source": "branch:dPhiJet12",
-      "feature_asimov_z": 0.11622740940932075,
-      "dnn_auc_train": 0.5512452232111098,
-      "dnn_auc_test": 0.5456887528858642
+      "feature_asimov_z": 0.5081103163651751,
+      "dnn_auc_train": 0.5786798181476561,
+      "dnn_auc_test": 0.5831241204391716
     },
     {
       "feature": "Jet1Pt",
       "source": "branch:Jet1Pt",
-      "feature_asimov_z": 0.12072860889980477,
-      "dnn_auc_train": 0.5294055083339673,
-      "dnn_auc_test": 0.5264219739644416
+      "feature_asimov_z": 0.5145571906711544,
+      "dnn_auc_train": 0.5451470170119777,
+      "dnn_auc_test": 0.5431063163360415
     },
     {
       "feature": "Jet2BTagScore",
       "source": "branch:Jet2BTagScore",
-      "feature_asimov_z": 0.19299472462693534,
-      "dnn_auc_train": 0.7364642790892115,
-      "dnn_auc_test": 0.7288874100745347
+      "feature_asimov_z": 0.5339543044876975,
+      "dnn_auc_train": 0.6211034591169032,
+      "dnn_auc_test": 0.626060640058791
     },
     {
       "feature": "Jet2Eta",
       "source": "branch:Jet2Eta",
-      "feature_asimov_z": 0.113246843738515,
-      "dnn_auc_train": 0.5219199147660217,
-      "dnn_auc_test": 0.518466312440367
+      "feature_asimov_z": 0.4819971497890974,
+      "dnn_auc_train": 0.5273102821932203,
+      "dnn_auc_test": 0.5307014748727921
     },
     {
       "feature": "Jet2Pt",
       "source": "branch:Jet2Pt",
-      "feature_asimov_z": 0.12278457999466454,
-      "dnn_auc_train": 0.5999481388128127,
-      "dnn_auc_test": 0.5894298787143375
+      "feature_asimov_z": 0.48706041051320675,
+      "dnn_auc_train": 0.5407448588423336,
+      "dnn_auc_test": 0.544688090800881
     },
     {
       "feature": "Jet3BTagScore",
       "source": "branch:Jet3BTagScore",
-      "feature_asimov_z": 0.13353040430369165,
-      "dnn_auc_train": 0.5858457525100017,
-      "dnn_auc_test": 0.5819359876912397
+      "feature_asimov_z": 0.41232469882739997,
+      "dnn_auc_train": 0.5411840970218987,
+      "dnn_auc_test": 0.5314168441469689
     },
     {
       "feature": "Jet3Eta",
       "source": "branch:Jet3Eta",
-      "feature_asimov_z": 0.10025694818822105,
-      "dnn_auc_train": 0.5581057264281687,
-      "dnn_auc_test": 0.5564810229362838
+      "feature_asimov_z": 0.4009670748741306,
+      "dnn_auc_train": 0.5327273429526063,
+      "dnn_auc_test": 0.5339318153633283
     },
     {
       "feature": "Jet3Pt",
       "source": "branch:Jet3Pt",
-      "feature_asimov_z": 0.10524908845699091,
-      "dnn_auc_train": 0.541725229187004,
-      "dnn_auc_test": 0.5466122593550905
+      "feature_asimov_z": 0.40097113791791317,
+      "dnn_auc_train": 0.5198627557409331,
+      "dnn_auc_test": 0.5283238776317232
     },
     {
       "feature": "eta_Jet1Jet2",
       "source": "branch:eta_Jet1Jet2",
-      "feature_asimov_z": 0.11381392642254914,
-      "dnn_auc_train": 0.5147886146479062,
-      "dnn_auc_test": 0.519766046098925
+      "feature_asimov_z": 0.484983124118154,
+      "dnn_auc_train": 0.5280462908867786,
+      "dnn_auc_test": 0.5167565651592071
     },
     {
       "feature": "M_Jet1Jet2",
       "source": "branch:M_Jet1Jet2",
-      "feature_asimov_z": 0.11950366204021334,
-      "dnn_auc_train": 0.5833785994819467,
-      "dnn_auc_test": 0.5745694565825161
+      "feature_asimov_z": 0.5207170526133982,
+      "dnn_auc_train": 0.5978103397141201,
+      "dnn_auc_test": 0.6031681509490703
     },
     {
       "feature": "dPhi_jetMET",
       "source": "branch:dPhi_jetMET",
-      "feature_asimov_z": 0.12046176155518308,
-      "dnn_auc_train": 0.5400304838051775,
-      "dnn_auc_test": 0.5374366048759962
+      "feature_asimov_z": 0.5180564341463509,
+      "dnn_auc_train": 0.5560259479499845,
+      "dnn_auc_test": 0.561365106743869
     },
     {
       "feature": "dEtaJet12",
       "source": "branch:dEtaJet12",
-      "feature_asimov_z": 0.11529164328348418,
-      "dnn_auc_train": 0.5442276086126075,
-      "dnn_auc_test": 0.5412717166555967
+      "feature_asimov_z": 0.5072587446884987,
+      "dnn_auc_train": 0.5919497600095206,
+      "dnn_auc_test": 0.5945170453790218
     },
     {
       "feature": "MET_significance",
       "source": "branch:MET_significance",
-      "feature_asimov_z": 0.1672147324163746,
-      "dnn_auc_train": 0.7875988042471419,
-      "dnn_auc_test": 0.7836757922285746
+      "feature_asimov_z": 0.7077809514508859,
+      "dnn_auc_train": 0.7767127189326989,
+      "dnn_auc_test": 0.7770094122311081
     },
     {
       "feature": "pT_Jet1Jet2",
       "source": "branch:pT_Jet1Jet2",
-      "feature_asimov_z": 0.11470108303049581,
-      "dnn_auc_train": 0.5263062224137626,
-      "dnn_auc_test": 0.5167259825011898
+      "feature_asimov_z": 0.48298148528807805,
+      "dnn_auc_train": 0.5182820299247489,
+      "dnn_auc_test": 0.519299362429244
     },
     {
       "feature": "ratioJet1PtMET",
       "source": "branch:ratioJet1PtMET",
-      "feature_asimov_z": 0.14500907678585384,
-      "dnn_auc_train": 0.6999013835028209,
-      "dnn_auc_test": 0.702487842776324
+      "feature_asimov_z": 0.6216641660168646,
+      "dnn_auc_train": 0.7202821761482734,
+      "dnn_auc_test": 0.7274504904240185
     },
     {
       "feature": "ratioPtJet21",
       "source": "branch:ratioPtJet21",
-      "feature_asimov_z": 0.1178081282984174,
-      "dnn_auc_train": 0.5735698142579995,
-      "dnn_auc_test": 0.5723106488464831
+      "feature_asimov_z": 0.4830411388710551,
+      "dnn_auc_train": 0.5242610379773932,
+      "dnn_auc_test": 0.5340320427838171
     },
     {
       "feature": "del_plus",
       "source": "branch:del_plus",
-      "feature_asimov_z": 0.1144210212138735,
-      "dnn_auc_train": 0.52223583448081,
-      "dnn_auc_test": 0.5173018653839114
+      "feature_asimov_z": 0.486403443151515,
+      "dnn_auc_train": 0.5328986272006574,
+      "dnn_auc_test": 0.5348709153451885
     },
     {
       "feature": "Jet1Eta",
       "source": "branch:Jet1Eta",
-      "feature_asimov_z": 0.1208635699946648,
-      "dnn_auc_train": 0.5279064502722447,
-      "dnn_auc_test": 0.5190284256146399
+      "feature_asimov_z": 0.5105443780165615,
+      "dnn_auc_train": 0.5309949050892362,
+      "dnn_auc_test": 0.5225260427767878
     },
     {
       "feature": "del_minus",
       "source": "branch:del_minus",
-      "feature_asimov_z": 0.1163827193421381,
-      "dnn_auc_train": 0.5538638707332896,
-      "dnn_auc_test": 0.552301780623145
+      "feature_asimov_z": 0.4967755353895954,
+      "dnn_auc_train": 0.5592778999658647,
+      "dnn_auc_test": 0.5608456222827201
     },
     {
       "feature": "MET_phi",
       "source": "branch:MET_phi",
-      "feature_asimov_z": 0.1192644867289204,
-      "dnn_auc_train": 0.50807082338876,
-      "dnn_auc_test": 0.5050797593600718
+      "feature_asimov_z": 0.5035570297417673,
+      "dnn_auc_train": 0.5008683029137413,
+      "dnn_auc_test": 0.49079976466316133
     },
     {
       "feature": "Jet1Phi",
       "source": "branch:Jet1Phi",
-      "feature_asimov_z": 0.11948267099037148,
-      "dnn_auc_train": 0.5054385984045675,
-      "dnn_auc_test": 0.5051863296026159
+      "feature_asimov_z": 0.5057714365393919,
+      "dnn_auc_train": 0.5048418326861427,
+      "dnn_auc_test": 0.4852572785328563
     },
     {
       "feature": "Jet2Phi",
       "source": "branch:Jet2Phi",
-      "feature_asimov_z": 0.11378376676878439,
-      "dnn_auc_train": 0.4983891495088939,
-      "dnn_auc_test": 0.5131903291598756
+      "feature_asimov_z": 0.48056452426511764,
+      "dnn_auc_train": 0.5080204712161055,
+      "dnn_auc_test": 0.4997543741381639
     },
     {
       "feature": "phi_Jet1Jet2",
       "source": "branch:phi_Jet1Jet2",
-      "feature_asimov_z": 0.11335904487050343,
-      "dnn_auc_train": 0.5117075624282291,
-      "dnn_auc_test": 0.516977994959727
+      "feature_asimov_z": 0.47797543640624046,
+      "dnn_auc_train": 0.5016675160579817,
+      "dnn_auc_test": 0.49653674309932755
     },
     {
       "feature": "Recoil",
       "source": "branch:Recoil",
-      "feature_asimov_z": 0.12017840759550386,
-      "dnn_auc_train": 0.5233260741853086,
-      "dnn_auc_test": 0.5226174593341597
+      "feature_asimov_z": 0.508948817540291,
+      "dnn_auc_train": 0.5233661510554743,
+      "dnn_auc_test": 0.5286421605619043
     },
     {
       "feature": "njets",
       "source": "branch:njets",
-      "feature_asimov_z": 0.12378709439270101,
-      "dnn_auc_train": 0.5578590930584604,
-      "dnn_auc_test": 0.5631680457244127
+      "feature_asimov_z": 0.5095124489841292,
+      "dnn_auc_train": 0.5211844421615247,
+      "dnn_auc_test": 0.5237464151233026
     },
     {
       "feature": "n_bjets",
       "source": "branch:n_bjets",
-      "feature_asimov_z": 0.31628709094261953,
-      "dnn_auc_train": 0.9129810899632166,
-      "dnn_auc_test": 0.9105277002092814
+      "feature_asimov_z": 0.7344879522006913,
+      "dnn_auc_train": 0.7719139848702021,
+      "dnn_auc_test": 0.7758008181865289
     },
     {
       "feature": "RecoilPhi",
       "source": "branch:RecoilPhi",
-      "feature_asimov_z": 0.11931454341578719,
-      "dnn_auc_train": 0.5011951531108196,
-      "dnn_auc_test": 0.5072268245918382
+      "feature_asimov_z": 0.5052937804918727,
+      "dnn_auc_train": 0.49978505661312167,
+      "dnn_auc_test": 0.495450533259514
     },
     {
       "feature": "dPhiJet13",
       "source": "branch:dPhiJet13",
-      "feature_asimov_z": 0.10153014276191571,
-      "dnn_auc_train": 0.5564606800463097,
-      "dnn_auc_test": 0.5596381315507809
+      "feature_asimov_z": 0.4010786471805829,
+      "dnn_auc_train": 0.5165203320305539,
+      "dnn_auc_test": 0.513656679834551
     },
     {
       "feature": "M_Jet1Jet3",
       "source": "branch:M_Jet1Jet3",
-      "feature_asimov_z": 0.10501266868646479,
-      "dnn_auc_train": 0.539473376693199,
-      "dnn_auc_test": 0.5339718727806746
+      "feature_asimov_z": 0.4175444562379597,
+      "dnn_auc_train": 0.5566556950857615,
+      "dnn_auc_test": 0.55130962521601
     }
   ]
 }

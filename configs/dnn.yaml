@@ -3,7 +3,7 @@
 # Model architecture
 model:
   type: "ParametricDNN"
-  input_features: 20  # Number of input features
+  input_features: 25  # Number of input features after correlation pruning
   hidden_layers: "128,64,32"  # Hidden layer sizes
   activation: "relu"  # Activation function
   dropout: 0.2  # Dropout rate
@@ -42,18 +42,15 @@ training:
     bins:
       njets: [1.5, 2.5, 3.5, 4.5]
       n_bjets: [0.5, 1.5]
-      Jet2Pt: [50.0, 100.0, 200.0, 400.0]
       costheta_star: [0.25, 0.5, 0.75]
       Recoil: [200.0, 300.0, 400.0, 600.0]
       JetHT: [200.0, 300.0, 500.0, 800.0]
     levels:
-      - ["has_jet2", "njets", "n_bjets", "Jet2Pt", "costheta_star", "Recoil", "JetHT"]
-      - ["has_jet2", "njets", "n_bjets", "Jet2Pt", "costheta_star", "Recoil"]
-      - ["has_jet2", "njets", "n_bjets", "Jet2Pt", "costheta_star"]
-      - ["has_jet2", "njets", "n_bjets", "Jet2Pt"]
-      - ["has_jet2", "njets", "n_bjets"]
-      - ["has_jet2", "njets"]
-      - ["has_jet2"]
+      - ["njets", "n_bjets", "costheta_star", "Recoil", "JetHT"]
+      - ["njets", "n_bjets", "costheta_star", "Recoil"]
+      - ["njets", "n_bjets", "costheta_star"]
+      - ["njets", "n_bjets"]
+      - ["njets"]
       - []
   # Fractional systematic uncertainty on background for syst-aware Asimov Z (0 = pure stat)
   sig_syst: 0.20
@@ -65,7 +62,7 @@ training:
 # Feature selection
 feature_selection:
   # Train final model on top-K features by Asimov significance (0 = keep all)
-  top_k_significance: 0  # 0 = keep all 25 features
+  top_k_significance: 0  # 0 = keep all features
   # Epochs for per-feature 1D DNN scans
   single_feature_epochs: 20
   # Drop near-constant features (useful for LHEF inputs with placeholder btag)
@@ -92,34 +89,26 @@ features:
   - "costheta_star"
   - "JetHT"
   - "Jet1BTagScore"
-  - "dRJet12"
   - "dPhiJet12"
-  - "Jet1Pt"
   - "Jet2BTagScore"
   - "Jet2Eta"
-  - "Jet2Pt"
   - "Jet3BTagScore"
   - "Jet3Eta"
-  - "Jet3Pt"
-  - "eta_Jet1Jet2"
   - "M_Jet1Jet2"
   - "dPhi_jetMET"
-  - "dEtaJet12"
   - "MET_significance"
-  - "pT_Jet1Jet2"
   - "ratioJet1PtMET"
   - "ratioPtJet21"
   - "del_plus"
   - "Jet1Eta"
-  - "del_minus"
   - "MET_phi"
-  - "Jet1Phi"
 #   - "MET_pt"
   - "Jet2Phi"
-  - "phi_Jet1Jet2"
   - "Recoil"
   - "njets"
   - "n_bjets"
+  - "n_muons"
+  - "n_electrons"
   - "RecoilPhi"
   - "dPhiJet13"
   - "M_Jet1Jet3"
@@ -159,6 +148,8 @@ variable_labels:
   RecoilPhi:          "Recoil $\\phi$"
   njets:              "Number of jets"
   n_bjets:            "Number of b-jets"
+  n_muons:            "Number of muons"
+  n_electrons:        "Number of electrons"
   dPhiJet13:          "$\\Delta\\phi(\\mathrm{Jet1}, \\mathrm{Jet3})$"
   M_Jet1Jet3:         "$M_{\\mathrm{Jet1,Jet3}}$ [GeV]"
 

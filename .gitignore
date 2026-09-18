@@ -73,3 +73,6 @@ condorJobs/submitfiles/
 .prompt
 .claude
 CLAUDE.md
+
+# Report artifacts and their generator scripts (kept locally, not versioned)
+reports/

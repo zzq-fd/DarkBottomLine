@@ -1811,22 +1811,25 @@ class DNNTrainer:
         optim = torch.optim.AdamW(net.parameters(), lr=lr)
         bce_loss = nn.BCEWithLogitsLoss(reduction="none")
 
-        Xtr = torch.from_numpy(X_train_np)
-        ytr = torch.from_numpy(y_train_i.astype("float32"))
-        wtr = torch.from_numpy(w_train_loss.astype("float32"))
-        Xva = torch.from_numpy(X_val_np)
-        yva = torch.from_numpy(y_val_i.astype("float32"))
-        wva_t = torch.from_numpy(w_val_loss.astype("float32"))
-        Xte = torch.from_numpy(X_test_np)
+        # Keep the full train/val/test tensors resident on the compute device.
+        # The network is tiny, so per-batch host->device copies were dominating
+        # wall time; batching below slices the device tensors directly.
+        dev = self.device
+        Xtr = torch.from_numpy(X_train_np).to(dev)
+        ytr = torch.from_numpy(y_train_i.astype("float32")).to(dev)
+        wtr = torch.from_numpy(w_train_loss.astype("float32")).to(dev)
+        Xva = torch.from_numpy(X_val_np).to(dev)
+        yva = torch.from_numpy(y_val_i.astype("float32")).to(dev)
+        wva_t = torch.from_numpy(w_val_loss.astype("float32")).to(dev)
+        Xte = torch.from_numpy(X_test_np).to(dev)
 
+        Mtr = None
         if parametric:
-            Mtr = torch.from_numpy(np.asarray(mass_train, dtype="float32"))
-            Mva = torch.from_numpy(np.asarray(mass_val, dtype="float32"))
-            Mte = torch.from_numpy(np.asarray(mass_test, dtype="float32"))
-            loader = DataLoader(TensorDataset(Xtr, ytr, wtr, Mtr), batch_size=batch_size, shuffle=True, drop_last=False)
+            Mtr = torch.from_numpy(np.asarray(mass_train, dtype="float32")).to(dev)
+            Mva = torch.from_numpy(np.asarray(mass_val, dtype="float32")).to(dev)
+            Mte = torch.from_numpy(np.asarray(mass_test, dtype="float32")).to(dev)
         else:
             Mva = Mte = None
-            loader = DataLoader(TensorDataset(Xtr, ytr, wtr), batch_size=batch_size, shuffle=True, drop_last=False)
 
         best_auc, best_state, bad = -np.inf, None, 0
         train_losses: List[float] = []
@@ -1838,14 +1841,14 @@ class DNNTrainer:
             net.train()
             running, n_batches = 0.0, 0
 
-            for batch in loader:
-                if parametric:
-                    xb, yb, wb, mb = batch
-                    mb = mb.to(self.device)
-                else:
-                    xb, yb, wb = batch
-                    mb = None
-                xb, yb, wb = xb.to(self.device), yb.to(self.device), wb.to(self.device)
+            n_train_rows = int(Xtr.shape[0])
+            perm = torch.randperm(n_train_rows, device=dev)
+            for start in range(0, n_train_rows, batch_size):
+                idx = perm[start:start + batch_size]
+                xb = Xtr[idx]
+                yb = ytr[idx]
+                wb = wtr[idx]
+                mb = Mtr[idx] if parametric else None
                 optim.zero_grad(set_to_none=True)
                 net_in = torch.cat([xb, mb], dim=-1) if parametric else xb
                 logits = net(net_in).squeeze(1)
@@ -1864,12 +1867,12 @@ class DNNTrainer:
 
             net.eval()
             with torch.no_grad():
-                Xva_in = torch.cat([Xva.to(self.device), Mva.to(self.device)], dim=-1) if parametric else Xva.to(self.device)
+                Xva_in = torch.cat([Xva, Mva], dim=-1) if parametric else Xva
                 logits_va = _batched_predict_logits(net, Xva_in, batch_size)
                 y_score_va = torch.sigmoid(logits_va).cpu().numpy()
-                wva_d = wva_t.to(self.device)
+                wva_d = wva_t
                 loss_val = float(
-                    (bce_loss(logits_va, yva.to(self.device)) * (wva_d / (wva_d.mean() + 1e-12))).mean().detach().cpu()
+                    (bce_loss(logits_va, yva) * (wva_d / (wva_d.mean() + 1e-12))).mean().detach().cpu()
                 )
 
             auc = float(roc_auc_score(y_val_i, y_score_va, sample_weight=w_val_local))
@@ -1902,13 +1905,13 @@ class DNNTrainer:
         net.eval()
         with torch.no_grad():
             if parametric:
-                Xte_in = torch.cat([Xte.to(self.device), Mte.to(self.device)], dim=-1)
-                Xtr_in = torch.cat([Xtr.to(self.device), Mtr.to(self.device)], dim=-1)
-                Xva_in = torch.cat([Xva.to(self.device), Mva.to(self.device)], dim=-1)
+                Xte_in = torch.cat([Xte, Mte], dim=-1)
+                Xtr_in = torch.cat([Xtr, Mtr], dim=-1)
+                Xva_in = torch.cat([Xva, Mva], dim=-1)
             else:
-                Xte_in = Xte.to(self.device)
-                Xtr_in = Xtr.to(self.device)
-                Xva_in = Xva.to(self.device)
+                Xte_in = Xte
+                Xtr_in = Xtr
+                Xva_in = Xva
             y_score_test = _batched_predict_sigmoid(net, Xte_in, batch_size)
             y_score_train = _batched_predict_sigmoid(net, Xtr_in, batch_size)
             y_score_val = _batched_predict_sigmoid(net, Xva_in, batch_size)

@@ -1,0 +1,227 @@
+[
+  {
+    "feature": "Jet1BTagScore",
+    "source": "unknown",
+    "auc": 0.8884222370137208,
+    "asimov_z": 0.0867747934347412,
+    "asimov_z_syst": 0.051194457858178256,
+    "delta_z": 0.055212591295271736,
+    "delta_z_syst": 0.04942964291043848
+  },
+  {
+    "feature": "Jet2BTagScore",
+    "source": "unknown",
+    "auc": 0.7309516471897058,
+    "asimov_z": 0.0523176647258587,
+    "asimov_z_syst": 0.03271807335998574,
+    "delta_z": 0.02075546258638923,
+    "delta_z_syst": 0.030953258412245964
+  },
+  {
+    "feature": "Jet3BTagScore",
+    "source": "unknown",
+    "auc": 0.6464948170657233,
+    "asimov_z": 0.03176179830019099,
+    "asimov_z_syst": 0.01769034693842712,
+    "delta_z": 0.0001995961607215227,
+    "delta_z_syst": 0.01592553199068734
+  },
+  {
+    "feature": "MET_significance",
+    "source": "unknown",
+    "auc": 0.7362378275137137,
+    "asimov_z": 0.04172728297332221,
+    "asimov_z_syst": 0.017144016556830604,
+    "delta_z": 0.010165080833852744,
+    "delta_z_syst": 0.015379201609090823
+  },
+  {
+    "feature": "n_bjets",
+    "source": "unknown",
+    "auc": 0.8871025600474186,
+    "asimov_z": 0.070307820870396,
+    "asimov_z_syst": 0.014922016654704622,
+    "delta_z": 0.03874561873092653,
+    "delta_z_syst": 0.013157201706964841
+  },
+  {
+    "feature": "M_Jet1Jet2",
+    "source": "unknown",
+    "auc": 0.6015602999330121,
+    "asimov_z": 0.03235626705596276,
+    "asimov_z_syst": 0.012310401114632576,
+    "delta_z": 0.000794064916493295,
+    "delta_z_syst": 0.010545586166892796
+  },
+  {
+    "feature": "M_Jet1Jet3",
+    "source": "unknown",
+    "auc": 0.5875310592069518,
+    "asimov_z": 0.02678853819727183,
+    "asimov_z_syst": 0.011912125579645516,
+    "delta_z": -0.004773663942197637,
+    "delta_z_syst": 0.010147310631905736
+  },
+  {
+    "feature": "dPhiJet13",
+    "source": "unknown",
+    "auc": 0.5115106300301953,
+    "asimov_z": 0.026031969610216334,
+    "asimov_z_syst": 0.011900468436080953,
+    "delta_z": -0.005530232529253134,
+    "delta_z_syst": 0.010135653488341173
+  },
+  {
+    "feature": "dPhiJet12",
+    "source": "unknown",
+    "auc": 0.5553432817736719,
+    "asimov_z": 0.031583764258300756,
+    "asimov_z_syst": 0.011717362386343662,
+    "delta_z": 2.1562118831287835e-05,
+    "delta_z_syst": 0.009952547438603881
+  },
+  {
+    "feature": "Jet3Eta",
+    "source": "unknown",
+    "auc": 0.4943012438119689,
+    "asimov_z": 0.02590309141471841,
+    "asimov_z_syst": 0.011520297594357694,
+    "delta_z": -0.00565911072475106,
+    "delta_z_syst": 0.009755482646617913
+  },
+  {
+    "feature": "dPhi_jetMET",
+    "source": "unknown",
+    "auc": 0.4907837259995139,
+    "asimov_z": 0.0329452115471484,
+    "asimov_z_syst": 0.011424720011737848,
+    "delta_z": 0.0013830094076789298,
+    "delta_z_syst": 0.009659905063998067
+  },
+  {
+    "feature": "costheta_star",
+    "source": "unknown",
+    "auc": 0.5774779045868604,
+    "asimov_z": 0.031163643890030124,
+    "asimov_z_syst": 0.011300742473562933,
+    "delta_z": -0.0003985582494393444,
+    "delta_z_syst": 0.009535927525823152
+  },
+  {
+    "feature": "Jet2Eta",
+    "source": "unknown",
+    "auc": 0.508700666064166,
+    "asimov_z": 0.030652823801239272,
+    "asimov_z_syst": 0.011064433404349785,
+    "delta_z": -0.0009093783382301962,
+    "delta_z_syst": 0.009299618456610004
+  },
+  {
+    "feature": "ratioPtJet21",
+    "source": "unknown",
+    "auc": 0.5693047919749397,
+    "asimov_z": 0.03067241435850452,
+    "asimov_z_syst": 0.010990407873997882,
+    "delta_z": -0.0008897877809649485,
+    "delta_z_syst": 0.009225592926258101
+  },
+  {
+    "feature": "Jet2Phi",
+    "source": "unknown",
+    "auc": 0.5078826122114375,
+    "asimov_z": 0.030775069198782035,
+    "asimov_z_syst": 0.01088154216241399,
+    "delta_z": -0.0007871329406874336,
+    "delta_z_syst": 0.009116727214674209
+  },
+  {
+    "feature": "JetHT",
+    "source": "unknown",
+    "auc": 0.5340062609061633,
+    "asimov_z": 0.03221112032971832,
+    "asimov_z_syst": 0.010795476221683165,
+    "delta_z": 0.0006489181902488497,
+    "delta_z_syst": 0.009030661273943384
+  },
+  {
+    "feature": "MET_phi",
+    "source": "unknown",
+    "auc": 0.5037346028937804,
+    "asimov_z": 0.032014462924390315,
+    "asimov_z_syst": 0.010788003419363538,
+    "delta_z": 0.00045226078492084654,
+    "delta_z_syst": 0.009023188471623757
+  },
+  {
+    "feature": "RecoilPhi",
+    "source": "unknown",
+    "auc": 0.5065234119876613,
+    "asimov_z": 0.03180417505027855,
+    "asimov_z_syst": 0.010723490148404456,
+    "delta_z": 0.00024197291080908095,
+    "delta_z_syst": 0.008958675200664675
+  },
+  {
+    "feature": "Jet1Eta",
+    "source": "unknown",
+    "auc": 0.5013388071839381,
+    "asimov_z": 0.03193759005435915,
+    "asimov_z_syst": 0.010580313176308594,
+    "delta_z": 0.0003753879148896827,
+    "delta_z_syst": 0.008815498228568813
+  },
+  {
+    "feature": "del_plus",
+    "source": "unknown",
+    "auc": 0.5092166918158159,
+    "asimov_z": 0.030433070203046333,
+    "asimov_z_syst": 0.010125850864805335,
+    "delta_z": -0.0011291319364231354,
+    "delta_z_syst": 0.008361035917065555
+  },
+  {
+    "feature": "Recoil",
+    "source": "unknown",
+    "auc": 0.4625922005847024,
+    "asimov_z": 0.0323706205214462,
+    "asimov_z_syst": 0.008479425096332054,
+    "delta_z": 0.0008084183819767332,
+    "delta_z_syst": 0.006714610148592273
+  },
+  {
+    "feature": "njets",
+    "source": "unknown",
+    "auc": 0.5278612570759998,
+    "asimov_z": 0.03188457316136516,
+    "asimov_z_syst": 0.004739936758394696,
+    "delta_z": 0.0003223710218956885,
+    "delta_z_syst": 0.0029751218106549154
+  },
+  {
+    "feature": "ratioJet1PtMET",
+    "source": "unknown",
+    "auc": 0.29619343448042057,
+    "asimov_z": 0.03790490368575329,
+    "asimov_z_syst": 0.003895726836146026,
+    "delta_z": 0.006342701546283823,
+    "delta_z_syst": 0.0021309118884062454
+  },
+  {
+    "feature": "n_muons",
+    "source": "unknown",
+    "auc": 0.32601536757561467,
+    "asimov_z": 0.038979730126643235,
+    "asimov_z_syst": 0.0027266116919282143,
+    "delta_z": 0.0074175279871737665,
+    "delta_z_syst": 0.0009617967441884338
+  },
+  {
+    "feature": "n_electrons",
+    "source": "unknown",
+    "auc": 0.3581382584277223,
+    "asimov_z": 0.0373076330993521,
+    "asimov_z_syst": 0.002468312274129609,
+    "delta_z": 0.0057454309598826345,
+    "delta_z_syst": 0.0007034973263898286
+  }
+]
